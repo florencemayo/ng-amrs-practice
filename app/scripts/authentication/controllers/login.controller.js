@@ -5,7 +5,7 @@ angular
         .module('app.authentication')
         .controller('LoginCtrl', LoginCtrl);
 
-LoginCtrl.$inject = ['$scope', 'OpenmrsRestService', '$timeout'];
+LoginCtrl.$inject = ['$scope', 'OpenmrsRestService', '$timeout', '$log', '$state'];
 
 function LoginCtrl($scope, OpenmrsRestService, $timeout) {
   $scope.errors = '';

@@ -38,7 +38,7 @@ jshint -W098, -W003, -W068, -W004, -W033, -W030, -W117, -W069
                   key: 'section_1',
                   type: 'section',
                   templateOptions: {
-                    label: 'Tarehe'
+                    label: 'Date'
                   },
                   data: {
                     fields: [
@@ -48,7 +48,7 @@ jshint -W098, -W003, -W068, -W004, -W033, -W030, -W117, -W069
                           defaultValue: parseDate(new Date()),
                           templateOptions: {
                             type: 'text',
-                            label: 'Tarehe',
+                            label: 'Date',
                             // datepickerPopup: 'dd-MMM-yyyy HH:mm:ss'
                           }
                       }

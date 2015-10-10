@@ -12,6 +12,8 @@
    */
   angular
     .module('ngAmrsApp', [
+      'formly',
+      'formlyBootstrap',
       'ngAnimate',
       'ngCookies',
       'ngResource',
@@ -23,8 +25,9 @@
       'app.patientsearch',
       'app.patientdashboard',
       'app.clinicDashboard',
+      'app.patientmerge',
       'app.formentry',
-      'app.utils'
+      'app.utils',
     ])
     .config(function ($stateProvider, $urlRouterProvider) {
       $urlRouterProvider.otherwise('/');
@@ -76,7 +79,14 @@
           templateUrl: 'views/authentication/login.html',
           controller: 'LoginCtrl',
           data: { requireLogin: false }
-        });
+        })
+        .state('patientmerge', {
+          url: '/mergePatients',
+          templateUrl: 'views/patient-merge/patient-merge.html',
+          controller: 'PatientMergeCtrl',
+          data: { requireLogin: true }
+        })
+        ;
 
 
     }).run(function ($rootScope, $state, $location, OpenmrsRestService, OpenmrsSettings, EtlRestServicesSettings,UtilRestService) {
@@ -92,7 +102,7 @@
           return;
         }
         
-        //check whether loginis required
+        //check whether login is required
         var shouldLogin = toState.data !== undefined && toState.data.requireLogin && !OpenmrsRestService.getAuthService().authenticated;
         //console.log(shouldLogin);
         if (shouldLogin) {
