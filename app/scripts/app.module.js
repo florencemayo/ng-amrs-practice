@@ -12,8 +12,6 @@
    */
   angular
     .module('ngAmrsApp', [
-      'formly',
-      'formlyBootstrap',
       'ngAnimate',
       'ngCookies',
       'ngResource',

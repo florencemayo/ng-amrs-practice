@@ -3,9 +3,8 @@
 
 angular
         .module('app.patientmerge',[
-            'formly',
+        	 'formly',
             'formlyBootstrap',
-            'app.openmrsRestServices'
-        	]
+            'app.openmrsRestServices',       	]
         	);
 })();

@@ -14,6 +14,7 @@ jshint -W098, -W003, -W068, -W004, -W033, -W030, -W117, -W069
         '$filter'
     ];
 
+
     function tabCtrl(SearchDataService,$translate, dialogs, $location, 
         $rootScope, $stateParams, $state, $scope, FormentryService, 
         OpenmrsRestService, $timeout, FormsMetaData, $filter) {
@@ -51,7 +52,14 @@ jshint -W098, -W003, -W068, -W004, -W033, -W030, -W117, -W069
                             label: 'Date',
                             // datepickerPopup: 'dd-MMM-yyyy HH:mm:ss'
                           }
-                      }
+                      },
+                        {
+                          key: 'selectLocation',
+                          type: 'openmrslocationselect',
+                          templateOptions: {
+                            label: 'Locations',
+                          }
+                        }
                     ]
                 }
               },

@@ -1,8 +1,13 @@
-<formly-form  model="PatientMerge.form.model" form="PatientMerge.form" fields="PatientMerge.form.fields" 
-					options="PatientMerge.form.options">
-					<button type="submit" class="btn btn-success" ng-click="submit(user)">Submit</button>
-</formly-form>
 
- 
- 
+    <div class="container col-md-4 col-md-offset-4" >
+    <h1>BEGIN</h1>
+    <h1>END</h1>
 
+    <formly-form model="user" fields="userFields">
+    <button type="submit" class="btn btn-default" ng-click="vm.submit(vm.user)">Submit</button>
+	</formly-form> 
+    </div>
+ 
+<!-- ng-controller="PatientMergeCtrl as vm"-->
+
+   

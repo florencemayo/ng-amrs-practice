@@ -1,0 +1,86 @@
+{
+  "name": "AMPATH Triage Encounter Form 1.00",
+  "uuid": "xxxx",
+  "processor": "triageEncounterForm",
+  "pages": [
+    {
+      "label": "Page 1",
+      "sections": [
+        {
+          "label": "Location",
+          "questions": [
+            {
+              "label": "Name",
+              "type": "encounterDate",
+              "required": "true",
+              "default": "today",
+              "validators": [
+                {
+                  "type": "date"
+                }
+              ]
+            },
+            {
+              "label": "Description",
+              "type": "",
+              "required": "false"
+            },          
+            {
+              "label": "Address",
+              "type": "",
+              "required": "false"
+            },
+             {
+              "label": "Address-2",
+              "type": "",
+              "required": ""
+            },
+             {
+              "label": "City/Village",
+              "type": "",
+              "required": "false"
+            },
+             {
+              "label": "State/Province",
+              "type": "",
+              "required": "false"
+            },
+             {
+              "label": "Country",
+              "type": "",
+              "required": "false"
+            },
+             {
+              "label": "Postal Code",
+              "type": "",
+              "required": "false"
+            },
+            {
+              "label": "Tags",
+              "type": "",
+              "required": "false"
+            },
+            {
+              "label": "Parent - Location",
+              "type": "",
+              "required": "false"
+            }
+          ]
+        },
+        {
+          "label": "Vital Signs:",
+          "questions": [
+            {
+              "concept": "a8a65d5a-1350-11df-a1f1-0026b9348838",
+              "label": "BP:Systolic:",
+              "type": "number",
+              "max": "250",
+              "min": "0",
+              "validators": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
