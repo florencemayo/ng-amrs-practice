@@ -11,7 +11,7 @@ jshint -W098, -W003, -W068, -W004, -W033, -W030, -W117, -W069
     tabCtrl.$inject = ['SearchDataService','$translate', 'dialogs',
         '$location', '$rootScope',  '$stateParams', '$state', '$scope',
         'FormentryService', 'OpenmrsRestService', '$timeout', 'FormsMetaData',
-        '$filter'
+        '$filter',
     ];
 
 
@@ -57,7 +57,7 @@ jshint -W098, -W003, -W068, -W004, -W033, -W030, -W117, -W069
                           key: 'selectLocation',
                           type: 'openmrslocationselect',
                           templateOptions: {
-                            label: 'Locations',
+                            label: 'Locations'
                           }
                         }
                     ]

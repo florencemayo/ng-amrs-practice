@@ -8,7 +8,7 @@
          .controller('openMrsLocationSelectCtrl', openMrsLocationSelectCtrl);
 
 
-        locationFactory.$inject=['$scope'];
+        //locationFactory.$inject=['$scope'];
 
             
             //THIS IS AN EXAMPLE TO SHOW ON THE SELECT OPTION
@@ -88,14 +88,14 @@
 
      //after retrieving locations and now set type
 
-      app.run(function (formlyConfig) {
+      app.run(function (formlyConfig,locationFactory) {
       formlyConfig.setType({
       name: 'openmrslocationselect',
       extends: 'select',
       defaultOptions: {
         templateOptions:{
           label:"Locations ha haa",
-          options: locationFactory.getLocations
+          options: locationFactory.getLocations()
            }
         }
     });
