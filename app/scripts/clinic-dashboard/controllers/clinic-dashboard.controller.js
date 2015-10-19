@@ -12,7 +12,8 @@
 	angular
 		.module('app.clinicDashboard')
 		.controller('ClinicDashboardCtrl', ClinicDashboardCtrl);
-	ClinicDashboardCtrl.$nject = ['$rootScope', '$scope', '$stateParams', 'OpenmrsRestService', 'LocationModel'];
+
+	ClinicDashboardCtrl.$inject = ['$rootScope', '$scope', '$stateParams', 'OpenmrsRestService', 'LocationModel'];
 
 	function ClinicDashboardCtrl($rootScope, $scope, $stateParams, OpenmrsRestService, LocationModel) {
 
@@ -73,8 +74,5 @@
         function wrapLocation(location) {
             return LocationModel.toWrapper(location);
         }
-
-
-
-    }
+ }
 })();
