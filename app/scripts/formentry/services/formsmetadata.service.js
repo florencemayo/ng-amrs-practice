@@ -47,6 +47,13 @@ jshint -W098, -W026, -W003, -W068, -W004, -W033, -W030, -W117, -W116, -W069
           encounterType:'b1e9ed0f-5222-4d47-98f7-5678b8a21ebd',
           encounterTypeName:'POST ANTENATAL'
         };
+        
+        forms['location'] = {
+            name: 'location',
+            uuid: 'location',
+            encounterType: 'b1e9ed0f-5222-4d47-98f7-5678b8a21ebd',
+            encounterTypeName: 'Location Thing'
+        }
 
         var service = {
             getForm: getForm
