@@ -84,6 +84,12 @@
           controller: 'PatientMergeCtrl',
           data: { requireLogin: true }
         })
+          .state('formSearch', {
+          url: '/formSearch',
+          templateUrl: 'views/formentry/formTest.html',
+          controller: 'FormTestCtrl',
+          data: { requireLogin: true }
+        })
         ;
 
 
@@ -121,6 +127,7 @@
       $rootScope.currentStateParams;
       $rootScope.broadcastPatient;
       $rootScope.activeEncounter;
+      $rootScope.broadcastForm;
 
       $rootScope.$on('$stateChangeSuccess', function (ev, to, toParams, from, fromParams) {
         $rootScope.previousState = from.name;
